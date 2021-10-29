@@ -25,13 +25,13 @@
                 <div class="col-md-4">
                     <img class="img-fluid" src="<%= products[i].image %>" alt="">
                 </div>
-                <div class="col-md-6 caption">
+                <div class="col-md-8 caption">
                     <h2 class="display-4">
                         <%= products[i].name %>
                     </h2>
                     <p class="category-product-page product-heading">
-                        <strong>Category:</strong>
-                        <%= category.name %>
+                        <strong>Description:</strong>
+                        <%= products[i].description %>
                     </p>
                     <p class="product-heading"><i class="fas fa-rupee-sign"></i>
                         <strong>
@@ -39,9 +39,9 @@
                         </strong>
                     </p>
                 </div>
-                <div class="col-md-2">
+                <!-- <div class="col-md-2">
                     <a class="btn btn-outline-info more-info" href="/product/<%= products[i]._id %>">More Info</a>
-                </div>
+                </div> -->
             </div>
         </span>
         <% } %>  
