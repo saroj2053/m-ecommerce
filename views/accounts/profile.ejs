@@ -1,0 +1,69 @@
+<% layout('layout') -%>
+
+<style>
+    .img-history {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 100px;
+        height: 100px;
+    }
+</style>
+<div class="container">
+<div class="row">
+    <div class="col-lg-4">
+        <img class="d-block img-fluid mb-3" src="<%= user.profile.picture %>">
+        <a class="btn btn-info btn-round btn-sm" href="/edit-profile">Edit Profile</a>
+        <br/>
+        <p>Name: <%= user.profile.name %></p>
+        <p>Email: <%= user.email %></p>
+
+        <% if (user.address === "" || typeof user.address === 'undefined') { %>
+
+            <p>Address: <span style="color:#c0392b; font-weight: bold;">You have no address</span></p>
+
+        <% } else { %>
+
+        <p>Address: <%= user.address %></p>
+
+        <% } %>
+    </div>
+
+    
+    <div class="col-lg-8">
+        <h3 class="text-center">History</h4>
+        <table class="table table-striped sticky-header">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Item's Name</th>
+                    <th>Amount Paid </th>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <div class="row">
+                <% for(var i=0; i < user.history.length; i++) {%>
+                    <tr>
+                        <td>
+                            <div class="col-md-4">
+                                <img class="img-history" src="<%= user.history[i].item.image %>" alt="">
+                            </div>
+                            <div class="col-md-6">
+                                <p>
+                                    <%= user.history[i].item.name %>
+                                </p>
+                            </div>
+                        </td>
+                        <div class="col-md-2">
+                            <td><i class="fas fa-rupee-sign"></i> <strong><%= user.history[i].paid %></strong>
+                            </td>
+                        </div>
+                    </tr>
+                    <% } %>
+                </div>
+                
+            </tbody>
+        </table>
+    </div>
+</div>
+</div>

@@ -1,0 +1,65 @@
+<% layout('layout') -%>
+
+
+<div class="jumbotron" id="navbar-gap">
+    <div class="container">
+        <h1 class="text-center">Find your favourite product</h1 class="text-center">
+        <p class="text-center">Search many of Ecommerce's products</p>
+        <div class="row">
+            <div style="margin: 0 auto;" class="col-md-6 col-md-offset-3">
+                <form method="POST" class="input-group col-md-12">
+                    <input type="text" id="search" class="form-control input-lg" name="search_item" placeholder="Search for a Product ...">
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+                    </span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .img-products {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 5px;
+        width: 290px;
+        height: 550px;
+    }
+    img:hover {
+        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    }
+
+    
+    
+</style>
+</style>
+
+<div class="container">
+    <div class="list-group">
+    
+    <% for (var i=0; i< products.length; i++) { %>
+            <span class="list-group-item">
+                <div class="row">
+                    <div class="col-md-4">
+                        <img class="img-fluid" src="<%= products[i].image %>" alt="">
+                    </div>
+                    <div class="col-md-6 caption">
+                        <h2 class="display-4">
+                            <%= products[i].name %>
+                        </h2>
+                        <p class="category-product-page product-heading">
+                           <strong>Category:</strong> <%= products[i].category.name %>
+                        </p>
+                        <p class="product-heading"><i class="fas fa-rupee-sign"></i>
+                            <strong><%= products[i].price %></strong>
+                        </p>
+                    </div>
+                    <div class="col-md-2">
+                        <a class="btn btn-outline-info more-info" href="/product/<%= products[i]._id %>">More Info</a>
+                    </div>    
+                </div>
+        </span>
+        <% } %>
+    </div>
+</div>

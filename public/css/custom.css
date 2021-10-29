@@ -1,0 +1,173 @@
+.paddingTop {
+  padding-top: 100px;
+}
+
+.home-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.home-image2 {
+  display: block;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.carousel-item {
+  height: 450px;
+}
+
+.carousel-image-1 {
+  background: linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0.52),
+      rgba(76, 102, 175, 0.73)
+    ),
+    url("/assets/ecommerce-shopping-cart.jpg");
+  transform: translate3d(0px, 0px, 0px);
+  background-size: cover;
+  z-index: 1;
+}
+
+.carousel-image-2 {
+  background: linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0.52),
+      rgba(15, 100, 52, 0.73)
+    ),
+    url("/assets/slider-image3.png");
+  background-size: cover;
+}
+
+.carousel-image-3 {
+  background: linear-gradient(
+      to bottom,
+      rgba(245, 246, 252, 0.52),
+      rgba(117, 19, 93, 0.73)
+    ),
+    url("/assets/slider-image4.jpg");
+  background-size: cover;
+}
+
+#navbar-gap {
+  margin-top: -4%;
+}
+
+.navbar-dark {
+  background-color: #003240 !important;
+  border-bottom: #008ed6 3px solid;
+  opacity: 0.9;
+}
+.navbar-dark .navbar-nav .nav-link {
+  color: #ffffff;
+}
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #fff;
+}
+#main-footer {
+  position: inherit;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #0a162b;
+  color: white;
+  text-align: center;
+}
+/* #main-footer {
+  padding: 10px 0;
+  color: #fff;
+  text-align: center;
+  margin-top: 80px;
+  border-top: 1px solid #e5e5e5;
+  background-color: #0a162b;
+} */
+
+#main-footer .footer-text {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.fa-shopping-cart {
+  color: #fff;
+}
+
+.fa-shopping-cart:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.paymentForm {
+  margin: 0 0 0 200px;
+}
+
+.createHoverSignup:hover {
+  background-color: rgb(45, 143, 204);
+  color: #fff;
+}
+
+.createHoverLogin:hover {
+  background-color: rgb(39, 184, 39);
+  color: #fff;
+}
+
+.form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.btn-round {
+  border-width: 1px;
+  border-radius: 30px !important;
+  padding: 11px 23px;
+}
+
+.form-control {
+  border-radius: 20px;
+}
+
+.navbar-brand {
+  color: #fff !important;
+  font-size: 1.5rem;
+  letter-spacing: 5px;
+  margin-top: 0;
+}
+
+.btn-primary {
+  background-color: rgb(8, 86, 134);
+}
+
+.navbar li a:hover {
+  color: #fff;
+}
+
+.form-accounts {
+  text-align: center;
+}
+
+.form-accounts:hover {
+  font-size: 20px;
+  color: rgb(8, 86, 134);
+  text-decoration: none;
+}
+
+.product-heading {
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+.total-cost-enhancer {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.button-center {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  transform: translateY(-50%);
+  justify-content: center;
+}
