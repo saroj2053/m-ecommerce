@@ -20,8 +20,7 @@ var cartLength = require("./middlewares/middleware");
 
 var app = express();
 
-var db =
-  "mongodb+srv://saroj270100:sarose2053@cluster0.z5tb4ao.mongodb.net/mecommerceDB?retryWrites=true&w=majority";
+var db = process.env.MONGO_URI;
 
 mongoose.connect(
   db,
