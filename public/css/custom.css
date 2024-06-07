@@ -1,19 +1,5 @@
 .paddingTop {
-  padding-top: 100px;
-}
-
-.home-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-.home-image2 {
-  display: block;
-  margin-top: 30px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  padding-top: 60px;
 }
 
 .carousel-item {
@@ -70,14 +56,12 @@
 
 #main-footer {
   width: 100%;
-  background-color: #0a162b;
-  color: white;
-  text-align: center;
 }
 
 #main-footer p {
-  font-size: 1.125rem;
+  font-size: 0.95rem;
   font-weight: 600;
+  color: rgb(71, 71, 71);
 }
 
 .fa-shopping-cart {
@@ -111,7 +95,7 @@
 .btn-round {
   border-width: 1px;
   border-radius: 30px !important;
-  padding: 11px 23px;
+  padding: 8px 16px;
 }
 
 .form-control {
@@ -160,4 +144,17 @@
   flex-wrap: nowrap;
   transform: translateY(-50%);
   justify-content: center;
+}
+
+.app__feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
 }
