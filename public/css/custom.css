@@ -67,27 +67,17 @@
 .navbar-dark .navbar-nav .nav-link:hover {
   color: #fff;
 }
+
 #main-footer {
-  position: inherit;
-  left: 0;
-  bottom: 0;
   width: 100%;
   background-color: #0a162b;
   color: white;
   text-align: center;
 }
-/* #main-footer {
-  padding: 10px 0;
-  color: #fff;
-  text-align: center;
-  margin-top: 80px;
-  border-top: 1px solid #e5e5e5;
-  background-color: #0a162b;
-} */
 
-#main-footer .footer-text {
-  text-align: center;
-  font-size: 1rem;
+#main-footer p {
+  font-size: 1.125rem;
+  font-weight: 600;
 }
 
 .fa-shopping-cart {
