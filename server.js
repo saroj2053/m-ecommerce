@@ -88,7 +88,5 @@ const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, function (err) {
   if (err) throw err;
-  console.log(
-    `Ecommerce Website Has Started Up! Made by Saroj Sah. It is Currently Served at Port ${PORT}`
-  );
+  console.log(`Currently Serving at Port ${PORT}`);
 });
