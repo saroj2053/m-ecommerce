@@ -10,7 +10,7 @@
                 <form method="POST" class="input-group col-md-12">
                     <input type="text" id="search" class="form-control input-lg" name="search_item" placeholder="Search for a Product ...">
                     <span class="input-group-btn">
-                        <button type="submit" class="btn btn-primary"><i class="fas fa-search"></i></button>
+                        <button type="submit" class="btn btn-secondary"><i class="fas fa-search"></i></button>
                     </span>
                 </form>
             </div>
@@ -18,45 +18,27 @@
     </div>
 </div>
 
-<style>
-    .img-products {
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        padding: 5px;
-        width: 290px;
-        height: 550px;
-    }
-    img:hover {
-        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
-    }
-    
-</style>
-
-<div class="container">
-    <div class="list-group">
-    
+<h2 class="text-center my-3">Our Products</h2>
+<div class="containerWrapper">
+    <div class="productsWrapper">
     <% for (var i=0; i< products.length; i++) { %>
-            <span class="list-group-item">
-                <div class="row">
-                    <div class="col-md-4">
-                        <img class="img-fluid" src="<%= products[i].image %>" alt="">
-                    </div>
-                    <div class="col-md-6 caption">
-                        <h2 class="display-4">
-                            <%= products[i].name %>
-                        </h2>
-                        <p class="category-product-page product-heading">
-                           <strong>Category:</strong> <%= products[i].category.name %>
-                        </p>
-                        <p class="product-heading"><i class="fas fa-rupee-sign"></i>
-                            <strong><%= products[i].price %></strong>
-                        </p>
-                    </div>
-                    <div class="col-md-2">
-                        <a class="btn btn-outline-info more-info" href="/product/<%= products[i]._id %>">More Info</a>
-                    </div>    
-                </div>
-        </span>
+        <div class="productContainer">
+            <p class="product__category">
+               <%= products[i].category.name %>
+            </p>
+            <img style="width: 150px; height: 150px;" src="<%= products[i].image %>" alt="">
+
+            <h2 class="mt-3">
+                <%= products[i].name.substring(0, 35) %> ...
+            </h2>
+            <p class="mt-3"><i class="fas fa-euro-sign"></i>
+                <strong><%= products[i].price %></strong>
+            </p>
+             
+            <a class="btn btn-outline-info more-info mt-3" href="/product/<%= products[i]._id %>">More Info</a>
+        </div>
+
         <% } %>
     </div>
+
 </div>

@@ -1,50 +1,55 @@
 <% layout('layout') -%>
 <style>
-   .img-products {
-        /* Gray border */
-        border-radius: 4px;
-        /* Rounded border */
-        padding: 5px;
-        /* Some padding */
-        width: 290px;
-        /* Set a small width */
-        height: 550px;
-    }
+  .img-products {
+    border-radius: 4px;
+
+    padding: 5px;
+
+    width: 290px;
+
+    height: 550px;
+  }
 </style>
-<div class="container">
+<div class="wrapper mt-10">
+  <div class="mb-5">
     <% if (products.length == 0) { %>
-        <div>
-            <img src="/assets/no-item-found-here.png" alt="no-product-logo">
-        </div>
+    <div style="width: 100%; display: flex; justify-content: center">
+      <img src="/assets/no-item-found-here.png" alt="no-product-logo" />
+    </div>
     <% } else { %>
-        
-        <h4 class="display-4">Showing Products for <%= products[0].category.name %></h4>
-        <hr>
-        <div class="list-group">
-        <% for (var i=0; i< products.length; i++) { %>
-            <span class="list-group-item">
-                <div class="row">
-                        <div class="col-md-4">
-                            <img class="img-fluid" src="<%= products[i].image %>" alt="">
-                        </div>
-                        <div class="col-md-6 caption">
-                                <h6 class="display-4">
-                                    <%= products[i].name %>
-                                </h6>
-                                <!-- <p class="category-product-page">
-                                    <%= products[i].category.name %>
-                                </p> -->
-                                <p><i class="fas fa-rupee-sign"></i> <strong class="product-heading"><%= products[i].price %></strong>
-                                </p>
-                        </div>
-                        <div class="col-md-2">
-                            <a class="btn btn-sm btn-outline-info" href="/product/<%= products[i]._id %>">Show More</a>
-                        </div>
-                        
-                </div>
-                
-            </span>
-            <% } %>
+
+    <h4 class="display-4 mb-5">
+      Showing results for <%= products[0].category.name %>
+    </h4>
+
+    <div class="category__products">
+      <% for (var i=0; i< products.length; i++) { %>
+      <div class="category__product">
+        <div>
+          <img
+            style="width: 100px; height: 100px"
+            class="img-thumbnail"
+            src="../<%= products[i].image %>"
+            alt=""
+          />
         </div>
-        <% } %>
+        <h2><%= products[i].name %></h2>
+        <div class="caption">
+          <p>
+            <i class="fas fa-euro-sign"></i>
+            <%= products[i].price %>
+          </p>
+        </div>
+        <div>
+          <a
+            class="btn btn-sm btn-outline-info"
+            href="/product/<%= products[i]._id %>"
+            >Show More</a
+          >
+        </div>
+      </div>
+      <% } %>
+    </div>
+    <% } %>
+  </div>
 </div>

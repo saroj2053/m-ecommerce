@@ -14,7 +14,7 @@
     <img class="rounded" src="/assets/no-product-found.png" alt="" srcset="" />
   </div>
 
-  <% } %>
+  <% } else { %>
 
   <div class="list-group">
     <% for (var i=0; i< products.length; i++) { %>
@@ -33,12 +33,21 @@
             <i class="fas fa-rupee-sign"></i>
             <strong> <%= products[i].price %> </strong>
           </p>
+          <p class="product-id">
+            <strong>ID:</strong>
+            <%= products[i]._id %>
+          </p>
         </div>
-        <!-- <div class="col-md-2">
-                    <a class="btn btn-outline-info more-info" href="/product/<%= products[i]._id %>">More Info</a>
-                </div> -->
+        <div class="col-md-2">
+          <a
+            class="btn btn-outline-info more-info"
+            href="/product/<%= products[i]._id %>"
+            >More Info</a
+          >
+        </div>
       </div>
     </span>
     <% } %>
   </div>
+  <% } %>
 </div>

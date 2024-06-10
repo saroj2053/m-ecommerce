@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>M | Ecommerce</title>
+    <title>Stronics - An ecommerce store</title>
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/custom.css" />
     <link
@@ -13,9 +13,15 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <div class="container">
-        <img style="height: 50px; width: 50px" src="/assets/mlogo.png" alt="" />
-        <a class="navbar-brand" href="/">Ecommerce</a>
+      <div class="containerWrapper">
+        <div style="display: flex; gap: 5px; align-items: center">
+          <img
+            style="height: 40px; width: 40px"
+            src="/assets/nav-brand-image.svg"
+            alt=""
+          />
+          <a href="/" class="navbar-brand">Stronics</a>
+        </div>
         <button
           class="navbar-toggler"
           type="button"
@@ -28,7 +34,10 @@
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarCollapse">
-          <ul class="navbar-nav nav-items ml-auto">
+          <ul
+            class="navbar-nav nav-items ml-auto"
+            style="display: flex; gap: 25px"
+          >
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown"
@@ -124,8 +133,8 @@
       </a>
     </div>
 
-    <div class="container" style="margin-top: 50px">
-      <div class="row">
+    <div class="containerWrapper" style="margin-top: 50px">
+      <div class="row app__features">
         <div class="col-md-4">
           <div class="app__feature">
             <img class="home-image" src="/assets/search--v2.png" alt="" />
@@ -150,27 +159,7 @@
       </div>
     </div>
 
-    <footer id="main-footer" style="margin-top: 50px">
-      <div
-        class="container"
-        style="
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        "
-      >
-        <div style="display: flex; align-items: center; gap: 10px">
-          <h3>
-            <img style="height: 50px; width: 50px" src="/assets/mlogo.png" />
-          </h3>
-          <p>M-Ecommerce | An online marketplace</p>
-        </div>
-        <p>
-          Copyright &copy; Project During COVID 19
-          <span id="year"></span>
-        </p>
-      </div>
-    </footer>
+    <!-- <% include ../partials/footer %> -->
 
     <script type="text/javascript" src="/js/jquery.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.bundle.min.js"></script>
